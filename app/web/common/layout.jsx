@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import HeaderComponet from './header';
+import './index.less';
 export default class Layout extends Component {
   constructor() {
     super();

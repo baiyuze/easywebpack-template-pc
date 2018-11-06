@@ -1,7 +1,7 @@
 'use strict';
 import React, { Component } from 'react';
 import axios from 'axios';
-import './index.scss';
+import './index.less';
 export default class List extends Component {
   componentWillMount() {
     axios.get('/api/article/list').then(function(response){

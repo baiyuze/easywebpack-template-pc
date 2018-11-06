@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
-import Layout from '../../component/layout.jsx';
-import List from './componets/list';
+import Layout from 'common/layout.jsx';
+import List from 'components/list';
 import { Button } from 'antd';
-import './index.scss';
+import './index.less';
 
 export default class ListIndex extends Component {
   componentDidMount() {
