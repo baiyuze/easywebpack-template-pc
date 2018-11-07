@@ -28,7 +28,6 @@ module.exports = () => {
     domainWhiteList.push(`http://127.0.0.1:${port}`);
     domainWhiteList.push(`http://${localIP}:${port}`);
   });
-
   exports.security = { domainWhiteList };
 
   return exports;
