@@ -12,7 +12,8 @@ module.exports = {
   framework: 'react',
   devtool: 'source-map',
   entry: {
-    list: 'app/web/page/list/index.jsx'
+    property: 'app/web/page/property/index.jsx',
+    test: 'app/web/page/test/index.jsx'
   },
   lib: ['react', 'react-dom'],
   alias: {

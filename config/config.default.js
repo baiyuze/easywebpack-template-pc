@@ -2,7 +2,23 @@ const path = require('path');
 const fs = require('fs');
 module.exports = app => {
   const exports = {};
-
+  exports.customLogger = {
+    agaEventLogger: {
+      file: path.join(process.cwd(), 'logs/aga-analysis/aga-analysis.log',),
+      formatter: meta => {
+        return meta.message;
+      },
+    },
+  };
+  exports.logrotator = {
+    filesRotateByHour: [
+      path.join(process.cwd(), 'logs/aga-analysis', 'aga-analysis.log'),
+    ],
+  };
+  exports.agalog = {
+    appId: 'demo',
+    overwriteTs: false,
+  };
   exports.siteFile = {
     '/favicon.ico': fs.readFileSync(path.join(app.baseDir, 'app/web/asset/images/favicon.ico'))
   };
@@ -28,6 +44,7 @@ module.exports = app => {
   exports.proxy = {
     'game': '192.168.0.169:7001'
   }
+  
   exports.compress = {
     threshold: 2048,
   },
@@ -41,6 +58,7 @@ module.exports = app => {
   exports.reactssr = {
     layout: path.join(app.baseDir, 'app/web/view/layout.html')
   };
+  
   exports.onerror= {
     // all(err, ctx) {
     //   // 在此处定义针对所有响应类型的错误处理方法

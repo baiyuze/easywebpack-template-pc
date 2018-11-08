@@ -19,7 +19,11 @@ export default class Layout extends Component {
           <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon"></link>
         </head>
         <body>
-          <div id="app">{this.props.children}</div></body>
+          <div id="app">
+            <div style={{width: "100%", height: "100%"}}>
+              {this.props.children}
+            </div>
+          </div></body>
       </html>;
     }
     return <div id="app">{this.props.children}</div>;

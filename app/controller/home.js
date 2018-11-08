@@ -11,12 +11,20 @@ module.exports = app => {
     async list() {
       let obj = Model.getPage(1, 10);
       const { ctx } = this;
-      await ctx.render('list.js', { ...obj, test: '我是test' });
+      
+      await ctx.render('property.js', { ...obj, test: '我是test' });
+    }
+
+    async test() {
+      let obj = Model.getPage(1, 10);
+      const { ctx } = this;
+      
+      await ctx.render('test.js', { ...obj, test: '我是test' });
     }
 
     async client() {
       const { ctx } = this;
-      await ctx.renderClient('list.js', Model.getPage(1, 10));
+      await ctx.renderClient('property.js', Model.getPage(1, 10));
     }
 
     async pager() {

@@ -41,7 +41,7 @@ module.exports = options => {
         } else {
           ctx.body = {
             code: res.status,
-            data: res.data.toString("utf8"),
+            data: res.data.toString("utf8") == '[object Object]' ? res.data : res.data.toString("utf8"),
             message: "error"
           }
         }

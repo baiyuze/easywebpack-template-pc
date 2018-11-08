@@ -3,8 +3,9 @@ import React, { Component } from 'react';
 import axios from 'axios';
 import './index.less';
 export default class List extends Component {
-  componentWillMount() {
-    axios.get('/api/article/list').then(function(response){
+  componentDidMount() {
+    axios.post('/game/api/article/list').then(function(response){
+      console.log(response,'-----------------');
     }).catch(function (response){
       
     });

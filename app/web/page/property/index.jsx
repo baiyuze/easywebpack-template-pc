@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import Layout from 'common/layout.jsx';
 import List from 'components/list';
+import Layout from 'components/layout';
 import { Button } from 'antd';
 import './index.less';
 
@@ -17,6 +17,7 @@ export default class ListIndex extends Component {
           <List test={this.props.test} list={this.props.list}></List>
         </div>
       </div>
-    </Layout>;
+    </Layout>
+    
   }
 }

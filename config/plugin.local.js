@@ -1,3 +1,5 @@
+const path = require('path');
+
 exports.cors = {
   enable: true,
   package: 'egg-cors'
@@ -12,3 +14,4 @@ exports.webpackreact = {
   enable: true,
   package: 'egg-webpack-react'
 };
+
